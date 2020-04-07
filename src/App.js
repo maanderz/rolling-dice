@@ -4,11 +4,11 @@ import "./styles.css";
 export default function App() {
   const [diceSum, setDiceSum] = useState(0);
 
-  const diceRoll = numberOfDice => {
+  const diceRoll = () => {
     let rolls = [];
     let rollSum = 0;
 
-    for (let i = 0; i < numberOfDice; i++) {
+    for (let i = 0; i < 3; i++) {
       // add the 1 so the die number is not 0
       rolls[i] = Math.floor(Math.random() * 6) + 1;
       console.log(rolls[i]);
@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div className="App">
       <h1>Dice Roll Demo</h1>
-      <button onClick={() => diceRoll(3)}> Click me </button>
+      <button onClick={() => diceRoll()}> Click me </button>
     </div>
   );
 }
